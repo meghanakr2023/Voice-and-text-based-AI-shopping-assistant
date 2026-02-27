@@ -35,7 +35,7 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 3.1,
       "position": [
-        880,
+        936,
         72
       ],
       "id": "74a9c0c6-3c5f-4384-a612-c722c0df980f",
@@ -48,7 +48,7 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
       "typeVersion": 1,
       "position": [
-        888,
+        880,
         296
       ],
       "id": "d882d0ae-3316-4628-b44c-43155ff4bba7",
@@ -69,7 +69,7 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1232,
+        1344,
         72
       ],
       "id": "a7ed9072-0301-4288-8c8e-6202b0451043",
@@ -108,7 +108,7 @@
       "type": "n8n-nodes-base.httpRequestTool",
       "typeVersion": 4.4,
       "position": [
-        1016,
+        1136,
         296
       ],
       "id": "3fa5c9c2-5fac-490f-9eaa-4f526b7d5981",
@@ -179,7 +179,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "bearer "
+              "value": "bearer"
             }
           ]
         },
@@ -238,6 +238,21 @@
       ],
       "id": "08f93eb8-cb87-4c98-88b3-7d00e780e6bc",
       "name": "Code in Python"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "1784622883",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1008,
+        304
+      ],
+      "id": "445c3a68-2c2c-4276-9e4a-09984fde25e3",
+      "name": "Simple Memory"
     }
   ],
   "pinData": {},
@@ -336,6 +351,17 @@
           }
         ]
       ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -344,7 +370,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "16e93e79-4f72-47c1-bc4b-222f4f367a48",
+  "versionId": "3b769deb-ca94-45d2-bae3-c5b924cb6064",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "4caebac40aa66499f4fd80e592c8ebb81297038bbebfbc024d88253fddc5e105"

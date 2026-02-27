@@ -1,159 +1,140 @@
-🛍️ Voice & Text Based AI Shopping Assistant (n8n + Telegram)
+# 🛍️ Voice & Text-Based AI Shopping Assistant — n8n Workflow
 
-An intelligent Telegram bot built using n8n, capable of understanding both voice and text messages to provide:
+An AI-powered shopping and styling assistant built using n8n that interacts with users on Telegram through both voice and text messages.
 
-🛒 Product search from Amazon India
+The assistant can search products from Amazon India and provide personalized styling advice.
 
-👗 Personalized styling advice
+---
 
-🎤 Voice-to-text conversion using AI
+## 🚀 Features
 
-🤖 Conversational shopping assistant
+🎤 Accepts voice messages and converts them to text
+💬 Supports text-based conversations
+🛒 Searches products from Amazon India
+👗 Provides personalized styling advice
+🤖 AI-powered conversational assistant
+📱 Telegram bot integration
 
-🚀 Features
-🛒 Product Search
+---
 
-User asks: "Puma shoes under 5000"
+## 🧠 How It Works
 
-Bot searches Amazon India
+### 🔹 Voice Mode
 
-Returns top product results with:
+1. User sends a voice message on Telegram
+2. Audio is downloaded and processed
+3. Speech is converted to text using AI
+4. AI assistant processes the request
 
-Product name
+---
 
-Price
+### 🔹 Text Mode
 
-Rating
+1. User sends a text message
+2. AI assistant understands the intent
+3. Responds with product results or styling tips
 
-Product link
+---
 
-👗 Styling Assistant
+### 🛍️ Product Search Mode
 
-User asks: "How to style blue jeans?"
+When users ask for products (e.g., "running shoes under ₹3000"):
 
-Bot asks clarifying questions
+* Builds Amazon India search URL
+* Scrapes product data using Scraper API
+* Extracts product name, price, rating, and link
+* Shows top results to the user
 
-Provides personalized outfit suggestions
+---
 
-🎤 Voice Support
+### 👗 Styling Assistant Mode
 
-Accepts Telegram voice messages
+When users ask fashion-related questions:
 
-Converts speech → text using AI (Whisper via Groq)
+* Asks clarifying questions (occasion, style, color, etc.)
+* Provides personalized outfit suggestions
+* Recommends accessories and styling tips
+* Offers to search products if needed
 
-Processes the request like normal text
+---
 
-🧠 How It Works (Workflow)
-📩 Input Handling
+## 🛠️ Tools & Integrations Used
 
-Telegram Trigger receives:
+* **n8n** — Workflow automation
+* **Telegram Bot API** — User interaction
+* **Google Gemini AI** — Conversational intelligence
+* **Groq Whisper API** — Speech-to-text conversion
+* **Scraper API** — Product data extraction
+* **Amazon India** — Product search source
 
-Text messages
+---
 
-Voice messages
+## 📌 Workflow Components
 
-If voice message detected:
+* Telegram Trigger (receives messages)
+* Voice detection and processing
+* Speech-to-text conversion
+* AI Agent for conversation
+* Product scraping tool
+* Response delivery via Telegram
 
-Download audio file
+---
 
-Convert .oga → .ogg
+## 📂 Files
 
-Send to speech-to-text API
+* `workflow.json` — Exported n8n workflow file
 
-Get transcription
+---
 
-🤖 AI Processing
+## ⭐ Example Use Cases
 
-Uses Google Gemini Chat Model with custom system prompt:
+### 🎤 Voice Input
 
-Determines intent (product search or styling)
+"Show me white sneakers under 3000"
 
-Calls tools when needed
+### 💬 Text Input
 
-Generates response
+"How to style a blue kurti for a wedding?"
 
-🌐 Product Scraping Tool
+### Output
 
-Scrapes Amazon India search results using Scraper API.
+✔ Product recommendations
+✔ Styling suggestions
+✔ Interactive conversation
 
-🧩 n8n Workflow Architecture
-Telegram → Detect Voice/Text → Transcribe (if voice)
-       → AI Agent → (Optional Tool Call)
-       → Send Reply to Telegram
-🛠️ Technologies Used
+---
 
-n8n — Workflow automation
+## ⚙️ How to Use
 
-Telegram Bot API
+1. Import `workflow.json` into n8n
+2. Configure Telegram Bot credentials
+3. Configure AI and API credentials
+4. Activate the workflow
+5. Start chatting with the bot
 
-Google Gemini AI
+---
 
-Groq Whisper (Speech-to-Text)
+## 🎯 Purpose
 
-Scraper API — Amazon scraping
+This project demonstrates an AI-driven conversational assistant capable of:
 
-⚙️ Setup Instructions
-Prerequisites
+* Voice and text interaction
+* E-commerce product search
+* Personalized recommendations
+* Multi-service integration
 
-n8n installed
+---
 
-Telegram Bot Token
+## 👩‍💻 Developed By
 
-Google Gemini API Key
+**Meghana K R**
+B.E Computer Science & Design
+Mysore University
 
-Groq API Key
+---
 
-Scraper API Key
+## 📜 License
 
-Import Workflow
+For educational and demonstration purposes.
 
-Download the JSON workflow file
-
-Open n8n
-
-Import workflow
-
-Configure credentials
-
-Configure Credentials
-
-Add in n8n:
-
-Telegram credentials
-
-Gemini API credentials
-
-Groq API key
-
-Scraper API key
-
-⚠️ Do NOT upload secrets to GitHub
-
-💬 Example Commands
-
-Product Search
-
-Show me running shoes under 3000
-
-Styling Advice
-
-Outfit ideas for wedding
-
-Voice Input
-Send a voice message 🎤
-
-📌 Use Cases
-
-AI shopping assistant
-
-Fashion advisor bot
-
-Voice-enabled chatbots
-
-Conversational commerce
-
-👩‍💻 Author
-
-Meghana K R
-B.E. Computer Science & Design
-AI & Web Development Enthusiast 🚀
+---
